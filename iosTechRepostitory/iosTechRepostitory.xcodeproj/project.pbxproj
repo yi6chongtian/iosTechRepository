@@ -15,6 +15,8 @@
 		24E42E47200B4E6200025EFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E42E46200B4E6200025EFA /* main.m */; };
 		24E42E51200B4E6200025EFA /* iosTechRepostitoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E42E50200B4E6200025EFA /* iosTechRepostitoryTests.m */; };
 		24E42E5C200B4E6200025EFA /* iosTechRepostitoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E42E5B200B4E6200025EFA /* iosTechRepostitoryUITests.m */; };
+		9267AC0D200DEFAA005F25A0 /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267AC0C200DEFAA005F25A0 /* SGQRCodeTool.m */; };
+		9267AC11200DF393005F25A0 /* ZJQRCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267AC0F200DF393005F25A0 /* ZJQRCodeScanner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		24E42E57200B4E6200025EFA /* iosTechRepostitoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosTechRepostitoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E42E5B200B4E6200025EFA /* iosTechRepostitoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosTechRepostitoryUITests.m; sourceTree = "<group>"; };
 		24E42E5D200B4E6200025EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9267AC0B200DEFAA005F25A0 /* SGQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeTool.h; sourceTree = "<group>"; };
+		9267AC0C200DEFAA005F25A0 /* SGQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeTool.m; sourceTree = "<group>"; };
+		9267AC0F200DF393005F25A0 /* ZJQRCodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJQRCodeScanner.m; sourceTree = "<group>"; };
+		9267AC10200DF393005F25A0 /* ZJQRCodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJQRCodeScanner.h; sourceTree = "<group>"; };
+		9267AC12200DF45C005F25A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,7 @@
 		24E42E2B200B4E6200025EFA = {
 			isa = PBXGroup;
 			children = (
+				9267AC12200DF45C005F25A0 /* PrefixHeader.pch */,
 				24E42E36200B4E6200025EFA /* iosTechRepostitory */,
 				24E42E4F200B4E6200025EFA /* iosTechRepostitoryTests */,
 				24E42E5A200B4E6200025EFA /* iosTechRepostitoryUITests */,
@@ -101,6 +109,7 @@
 		24E42E36200B4E6200025EFA /* iosTechRepostitory */ = {
 			isa = PBXGroup;
 			children = (
+				9267AC08200DEF3E005F25A0 /* tool */,
 				24E42E37200B4E6200025EFA /* AppDelegate.h */,
 				24E42E38200B4E6200025EFA /* AppDelegate.m */,
 				24E42E3A200B4E6200025EFA /* ViewController.h */,
@@ -130,6 +139,41 @@
 				24E42E5D200B4E6200025EFA /* Info.plist */,
 			);
 			path = iosTechRepostitoryUITests;
+			sourceTree = "<group>";
+		};
+		9267AC08200DEF3E005F25A0 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				9267AC09200DEF4A005F25A0 /* 二维码 */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		9267AC09200DEF4A005F25A0 /* 二维码 */ = {
+			isa = PBXGroup;
+			children = (
+				9267AC0E200DF373005F25A0 /* 二维码扫描 */,
+				9267AC0A200DEF86005F25A0 /* 二维码生成 */,
+			);
+			path = "二维码";
+			sourceTree = "<group>";
+		};
+		9267AC0A200DEF86005F25A0 /* 二维码生成 */ = {
+			isa = PBXGroup;
+			children = (
+				9267AC0B200DEFAA005F25A0 /* SGQRCodeTool.h */,
+				9267AC0C200DEFAA005F25A0 /* SGQRCodeTool.m */,
+			);
+			path = "二维码生成";
+			sourceTree = "<group>";
+		};
+		9267AC0E200DF373005F25A0 /* 二维码扫描 */ = {
+			isa = PBXGroup;
+			children = (
+				9267AC10200DF393005F25A0 /* ZJQRCodeScanner.h */,
+				9267AC0F200DF393005F25A0 /* ZJQRCodeScanner.m */,
+			);
+			path = "二维码扫描";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +243,7 @@
 				TargetAttributes = {
 					24E42E33200B4E6200025EFA = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					24E42E4B200B4E6200025EFA = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -268,6 +312,8 @@
 				24E42E3C200B4E6200025EFA /* ViewController.m in Sources */,
 				24E42E47200B4E6200025EFA /* main.m in Sources */,
 				24E42E39200B4E6200025EFA /* AppDelegate.m in Sources */,
+				9267AC11200DF393005F25A0 /* ZJQRCodeScanner.m in Sources */,
+				9267AC0D200DEFAA005F25A0 /* SGQRCodeTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,11 +476,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = iosTechRepostitory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tang.iosTechRepostitory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,11 +494,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = iosTechRepostitory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tang.iosTechRepostitory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
