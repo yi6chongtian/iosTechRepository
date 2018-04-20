@@ -9,9 +9,35 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#pragma mark - 日志打印
+
+#ifdef DEBUG
+//-- 区分设备和模拟器,
+//解决Product -> Scheme -> Run -> Arguments -> OS_ACTIVITY_MODE为disable时，真机下 Xcode Debugger 不打印的bug ---
+#if TARGET_OS_IPHONE
+/*iPhone Device*/
+#define DLog(format, ...) printf("%s:Dev: %s [Line %d]\n%s\n\n", [DATE_STRING UTF8String], __PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String])
+#else
+/*iPhone Simulator*/
+#define DLog(format, ...) NSLog((@":Sim: %s [Line %d]\n%@\n\n"), __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:format, ##__VA_ARGS__])
+#endif
+#else
+#define DLog(...)
+#endif
 
 #pragma mark - 屏幕宽度、高度
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#pragma mark - 网络请求
+
+#import "AFNetworking.h"
+#import "TZBNetTool.h"
+#import "TZBNetRequest.h"
+
+#define kOpenHttpsAuth NO //是否使用https
+///< SSL证书名称，仅支持cer格式
+#define kCertificateName @"httpsServerAuth"
+
 
 #endif /* PrefixHeader_pch */
