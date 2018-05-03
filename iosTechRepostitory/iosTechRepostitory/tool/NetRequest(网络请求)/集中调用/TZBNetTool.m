@@ -7,6 +7,7 @@
 //
 
 #import "TZBNetTool.h"
+#import "AFNetworking.h"
 
 @implementation TZBNetTool
 

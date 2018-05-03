@@ -34,6 +34,7 @@
 #import "AFNetworking.h"
 #import "TZBNetTool.h"
 #import "TZBNetRequest.h"
+#import "FMDB.h"
 
 #define kOpenHttpsAuth NO //是否使用https
 ///< SSL证书名称，仅支持cer格式
