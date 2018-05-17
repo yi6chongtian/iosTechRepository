@@ -187,9 +187,9 @@
 		24900E7F209B6065000D1394 /* YZDB */ = {
 			isa = PBXGroup;
 			children = (
+				24900E82209B6065000D1394 /* YZFMDB.h */,
 				24900E80209B6065000D1394 /* YZFMDB.m */,
 				24900E81209B6065000D1394 /* NSObject+YZDBModel.m */,
-				24900E82209B6065000D1394 /* YZFMDB.h */,
 				24900E83209B6065000D1394 /* NSObject+YZDBModel.h */,
 			);
 			path = YZDB;
@@ -257,13 +257,13 @@
 		24E42E2B200B4E6200025EFA = {
 			isa = PBXGroup;
 			children = (
-				9267AC12200DF45C005F25A0 /* PrefixHeader.pch */,
+				D33358C2B04BA7CE90ADDDAD /* Frameworks */,
 				24E42E36200B4E6200025EFA /* iosTechRepostitory */,
 				24E42E4F200B4E6200025EFA /* iosTechRepostitoryTests */,
 				24E42E5A200B4E6200025EFA /* iosTechRepostitoryUITests */,
-				24E42E35200B4E6200025EFA /* Products */,
 				5C35645060893822695CF377 /* Pods */,
-				D33358C2B04BA7CE90ADDDAD /* Frameworks */,
+				9267AC12200DF45C005F25A0 /* PrefixHeader.pch */,
+				24E42E35200B4E6200025EFA /* Products */,
 			);
 			sourceTree = "<group>";
 		};

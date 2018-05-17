@@ -22,7 +22,6 @@
 
 @required
 
-+ (YZFMDB *)yzDB;
 
 + (NSDictionary *)primaryKeys;
 
@@ -38,27 +37,5 @@
 
 @interface NSObject (YZDBModel)<YZDBModelProtocol>
 
-
-//@property (nonatomic,strong) NSNumber *yzId;
-//
-//@property (nonatomic,copy) NSString *createDate;
-//
-//@property (nonatomic,copy) NSString *updateDate;
-
-//+ (BOOL)createTable;
-//
-//- (BOOL)saveToDB;
-//
-//- (BOOL)updateToDB;
-
-//- (BOOL)updateToDB:(NSString *)where;
-
-//- (BOOL)removeFromDB;
-//
-//+ (BOOL)removeFromDB:(NSString *)where;
-//
-//+ (NSArray *)getAllData;
-//
-//+ (NSArray *)getData:(NSString *)where;
 
 @end

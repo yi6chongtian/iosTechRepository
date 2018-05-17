@@ -18,6 +18,10 @@
 
 #define AUTOINCREMENT @"AUTOINCREMENT"
 
+#define PRIMARYKEYDESC @"integer PRIMARY KEY AUTOINCREMENT"
+
+#define INTEGER @"integer"
+
 
 
 @interface YZFMDB()
@@ -48,6 +52,18 @@ static YZFMDB *_singleDB;
     @synchronized (self) {
         if (_singleDB == nil) {
             NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+            path = [path stringByAppendingPathComponent:@"pigdata"];
+            NSFileManager *fm = [NSFileManager defaultManager];
+            BOOL isDir = FALSE;
+            BOOL isDirExist = [fm fileExistsAtPath:path
+                                                isDirectory:&isDir];
+            if(!(isDirExist && isDir)){
+                BOOL result = [fm createDirectoryAtPath:path
+                       withIntermediateDirectories:YES
+                                        attributes:nil
+                                             error:nil];
+                NSAssert(result, @"创建文件夹失败");
+            }
             path = [path stringByAppendingPathComponent:@"yz.sqlite"];
             FMDatabase *fmdb = [FMDatabase databaseWithPath:path];
             if([fmdb open]){
@@ -195,8 +211,19 @@ static YZFMDB *_singleDB;
     [finalStr appendFormat:@") values (%@)", tempStr];
     //执行insert语句
     flag = [self.db executeUpdate:finalStr withArgumentsInArray:argumentsArr];
+    //如果主键为新增，设置主键值
+    
+    if(primaryKeyList.count == 1 && [(NSString *)primaryKeyList.allValues[0] isEqualToString:PRIMARYKEYDESC]){
+        NSInteger pkid = [self getMaxId:record];
+        NSAssert(pkid != -1, @"错误");
+        if(pkid != -1){
+            [(NSObject *)record setValue:[NSNumber numberWithInteger:pkid] forKey:primaryKeyList.allKeys[0]];
+        }
+    }
     return flag;
 }
+
+
 
 - (BOOL)updateRecord:(id<YZDBModelProtocol>)record{
     BOOL flag = NO;
@@ -281,6 +308,29 @@ static YZFMDB *_singleDB;
     return flag;
 }
 
+- (BOOL)saveOrUpdateRecord:(id<YZDBModelProtocol>)record{
+    NSDictionary *primaryKeyList = [[(id)record class] primaryKeys];
+    NSMutableString *where = [NSMutableString string];
+    [where appendString:@"where "];
+    for (NSString *key in primaryKeyList.allKeys) {
+        BOOL isStr = ![(NSString *)primaryKeyList[key] containsString:INTEGER];
+        [where appendFormat:@"%@ = ",key];
+        if(isStr){
+            [where appendFormat:@"'%@' and",[(NSObject *)record valueForKey:key]];
+        }else{
+            [where appendFormat:@"%zd and",[[(NSObject *)record valueForKey:key] integerValue]];
+        }
+    }
+    //删除最后一个and
+    [where deleteCharactersInRange:NSMakeRange(where.length-3, 3)];
+    NSArray *list = [self getData:[(id)record class] where:where];
+    if(list.count == 0){
+        return [self insertRecord:record];
+    }else{
+        return [self updateRecord:record];
+    }
+}
+
 - (BOOL)removeRecord:(id<YZDBModelProtocol>)record{
     NSDictionary *primaryKeyList = [[(id)record class] primaryKeys];
     NSAssert(primaryKeyList.count > 0, @"提供主键信息");
@@ -303,9 +353,12 @@ static YZFMDB *_singleDB;
 }
 
 - (BOOL)removeRecord:(Class)c where:(NSString *)where{
+    return [self removeRecordByTableName:[c tableName] where:where];
+}
+
+- (BOOL)removeRecordByTableName:(NSString *)tableName where:(NSString *)where{
     BOOL flag = NO;
-    NSString *tablename = [c tableName];
-    NSString *sql = [NSString stringWithFormat:@"delete from %@ %@",tablename,where ? where : @""];
+    NSString *sql = [NSString stringWithFormat:@"delete from %@ %@",tableName,where ? where : @""];
     flag = [[self db] executeUpdate:sql];
     return flag;
 }
@@ -506,6 +559,23 @@ static YZFMDB *_singleDB;
     }
     
     return mArr;
+}
+
+- (NSInteger)getMaxId:(id<YZDBModelProtocol>)value{
+    __block NSInteger index = -1;
+    [self yz_inDatabase:^{
+        NSDictionary *primaryKeyList = [[(id)value class] primaryKeys];
+        NSString *tableName = [[(id)value class] tableName];
+        NSString *sql = [NSString stringWithFormat:@"select max(%@) from %@",primaryKeyList.allKeys[0],tableName];
+        if([self.db open]){
+            FMResultSet *set = [self.db executeQuery:sql];
+            while ([set next]) {
+                index = [set intForColumnIndex:0];
+            }
+        }
+    }];
+    return index;
+    
 }
 
 
