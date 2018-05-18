@@ -18,7 +18,7 @@
 #define SQL_BLOB     @"BLOB" //data
 
 
-@protocol YZDBModelProtocol
+@protocol YZDBModelProtocol<NSObject>
 
 @required
 

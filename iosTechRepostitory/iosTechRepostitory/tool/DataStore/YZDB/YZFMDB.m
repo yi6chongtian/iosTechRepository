@@ -170,8 +170,8 @@ static YZFMDB *_singleDB;
 
 - (BOOL)insertRecord:(id<YZDBModelProtocol>)record{
     BOOL flag = NO;
-    NSString *tableName = [[(id)record class] tableName];
-    NSDictionary *primaryKeyList = [[(id)record class] primaryKeys];
+    NSString *tableName = [[record class] tableName];
+    NSDictionary *primaryKeyList = [[record class] primaryKeys];
     NSAssert(primaryKeyList.count > 0, @"请提供主键信息");
     NSArray *columnArr = [self getColumnArr:tableName];
     NSMutableDictionary *dic = [self getModelPropertyKeyValue:record tableName:tableName clomnArr:columnArr];
@@ -227,8 +227,8 @@ static YZFMDB *_singleDB;
 
 - (BOOL)updateRecord:(id<YZDBModelProtocol>)record{
     BOOL flag = NO;
-    NSString *tableName = [[(id)record class] tableName];
-    NSDictionary *primaryKeyList = [[(id)record class] primaryKeys];
+    NSString *tableName = [[record class] tableName];
+    NSDictionary *primaryKeyList = [[record class] primaryKeys];
     NSAssert(primaryKeyList.count > 0, @"请提供主键信息");
     NSArray *columnArr = [self getColumnArr:tableName];
     for (NSString *key in primaryKeyList) {
@@ -274,8 +274,8 @@ static YZFMDB *_singleDB;
 
 - (BOOL)updateRecord:(id<YZDBModelProtocol>)record where:(NSString *)where{
     BOOL flag = NO;
-    NSString *tableName = [[(id)record class] tableName];
-    NSDictionary *primaryKeyList = [[(id)record class] primaryKeys];
+    NSString *tableName = [[record class] tableName];
+    NSDictionary *primaryKeyList = [[record class] primaryKeys];
     NSAssert(primaryKeyList.count > 0, @"请提供主键信息");
     NSArray *columnArr = [self getColumnArr:tableName];
     for (NSString *key in primaryKeyList) {
@@ -309,21 +309,21 @@ static YZFMDB *_singleDB;
 }
 
 - (BOOL)saveOrUpdateRecord:(id<YZDBModelProtocol>)record{
-    NSDictionary *primaryKeyList = [[(id)record class] primaryKeys];
+    NSDictionary *primaryKeyList = [[record class] primaryKeys];
     NSMutableString *where = [NSMutableString string];
     [where appendString:@"where "];
     for (NSString *key in primaryKeyList.allKeys) {
         BOOL isStr = ![(NSString *)primaryKeyList[key] containsString:INTEGER];
         [where appendFormat:@"%@ = ",key];
         if(isStr){
-            [where appendFormat:@"'%@' and",[(NSObject *)record valueForKey:key]];
+            [where appendFormat:@"'%@' and",[(id)record valueForKey:key]];
         }else{
-            [where appendFormat:@"%zd and",[[(NSObject *)record valueForKey:key] integerValue]];
+            [where appendFormat:@"%zd and",[[(id)record valueForKey:key] integerValue]];
         }
     }
     //删除最后一个and
     [where deleteCharactersInRange:NSMakeRange(where.length-3, 3)];
-    NSArray *list = [self getData:[(id)record class] where:where];
+    NSArray *list = [self getData:[record class] where:where];
     if(list.count == 0){
         return [self insertRecord:record];
     }else{
@@ -332,7 +332,7 @@ static YZFMDB *_singleDB;
 }
 
 - (BOOL)removeRecord:(id<YZDBModelProtocol>)record{
-    NSDictionary *primaryKeyList = [[(id)record class] primaryKeys];
+    NSDictionary *primaryKeyList = [[record class] primaryKeys];
     NSAssert(primaryKeyList.count > 0, @"提供主键信息");
     NSString *sql = nil;
     NSMutableString *where  = [NSMutableString stringWithString:@"where "];
@@ -347,7 +347,7 @@ static YZFMDB *_singleDB;
             [where deleteCharactersInRange:NSMakeRange(where.length-4, 4)];
         }
     }
-    sql = [NSString stringWithFormat:@"delete from %@ %@",[[(id)record class] tableName],where];
+    sql = [NSString stringWithFormat:@"delete from %@ %@",[[record class] tableName],where];
     BOOL flag = [self.db executeUpdate:sql];
     return flag;
 }
