@@ -16,6 +16,7 @@
 @property (strong,nonatomic) AVCaptureSession * session;
 @property (strong,nonatomic) AVCaptureVideoPreviewLayer * previewLayer;
 @property (nonatomic, retain) UIImageView * line;
+@property (nonatomic,assign,getter=isStopWhenResult) BOOL stopWhenResult;
 
 +(instancetype)sharedInstance;
 @property (copy,nonatomic) void (^result)(NSString *resultString);

@@ -53,6 +53,7 @@
 		24E42E5C200B4E6200025EFA /* iosTechRepostitoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E42E5B200B4E6200025EFA /* iosTechRepostitoryUITests.m */; };
 		2653CEDDE02170B56CD575D6 /* libPods-iosTechRepostitoryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C281A8FD240A6A060767B5 /* libPods-iosTechRepostitoryTests.a */; };
 		748BC82C5AD7B0DF32EBFBFA /* libPods-iosTechRepostitory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 943107B0E7A30B914CCA5C8C /* libPods-iosTechRepostitory.a */; };
+		81BECB2220B4FF2400FEBCD2 /* TZBNetRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BECB2120B4FF2400FEBCD2 /* TZBNetRequestTests.m */; };
 		9267AC0D200DEFAA005F25A0 /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267AC0C200DEFAA005F25A0 /* SGQRCodeTool.m */; };
 		9267AC11200DF393005F25A0 /* ZJQRCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267AC0F200DF393005F25A0 /* ZJQRCodeScanner.m */; };
 		A31A741EF6F4C572EFB194AC /* libPods-iosTechRepostitoryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A7822A5D93BACBEA52E0B3 /* libPods-iosTechRepostitoryUITests.a */; };
@@ -121,6 +122,7 @@
 		3A54A16AF3A58E5050EEDE3B /* Pods-iosTechRepostitoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitoryUITests/Pods-iosTechRepostitoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4009D56C1C4A95E93B2A2263 /* Pods-iosTechRepostitoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitoryTests/Pods-iosTechRepostitoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61C281A8FD240A6A060767B5 /* libPods-iosTechRepostitoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosTechRepostitoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BECB2120B4FF2400FEBCD2 /* TZBNetRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZBNetRequestTests.m; sourceTree = "<group>"; };
 		89CB19B4283088A68E53E60B /* Pods-iosTechRepostitoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitoryTests/Pods-iosTechRepostitoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		9115FA34D57B003CB5D458E7 /* Pods-iosTechRepostitory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitory/Pods-iosTechRepostitory.debug.xcconfig"; sourceTree = "<group>"; };
 		9267AC0B200DEFAA005F25A0 /* SGQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeTool.h; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				24E42E50200B4E6200025EFA /* iosTechRepostitoryTests.m */,
 				24E42E52200B4E6200025EFA /* Info.plist */,
+				81BECB2120B4FF2400FEBCD2 /* TZBNetRequestTests.m */,
 			);
 			path = iosTechRepostitoryTests;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81BECB2220B4FF2400FEBCD2 /* TZBNetRequestTests.m in Sources */,
 				246DF255207DE5B70010545D /* SecondViewController.m in Sources */,
 				24D51087207F27D0005F4970 /* PassworkTool.m in Sources */,
 				24900E93209B6066000D1394 /* Student.m in Sources */,
