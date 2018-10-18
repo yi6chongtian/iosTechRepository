@@ -12,9 +12,6 @@
 		246DF24F207DDC280010545D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 246DF24E207DDC280010545D /* Reachability.m */; };
 		246DF250207DDC280010545D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 246DF24E207DDC280010545D /* Reachability.m */; };
 		246DF251207DDC280010545D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 246DF24E207DDC280010545D /* Reachability.m */; };
-		246DF254207DE5B70010545D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246DF253207DE5B70010545D /* SecondViewController.m */; };
-		246DF255207DE5B70010545D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246DF253207DE5B70010545D /* SecondViewController.m */; };
-		246DF256207DE5B70010545D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246DF253207DE5B70010545D /* SecondViewController.m */; };
 		246DF257207E01360010545D /* TZBNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 246A46A4207C9DAD00E2035D /* TZBNetRequest.m */; };
 		246DF258207E01370010545D /* TZBNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 246A46A4207C9DAD00E2035D /* TZBNetRequest.m */; };
 		246DF259207E013A0010545D /* TZBNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 246DF24A207DAA8D0010545D /* TZBNetTool.m */; };
@@ -53,6 +50,9 @@
 		24E42E5C200B4E6200025EFA /* iosTechRepostitoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E42E5B200B4E6200025EFA /* iosTechRepostitoryUITests.m */; };
 		2653CEDDE02170B56CD575D6 /* libPods-iosTechRepostitoryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C281A8FD240A6A060767B5 /* libPods-iosTechRepostitoryTests.a */; };
 		748BC82C5AD7B0DF32EBFBFA /* libPods-iosTechRepostitory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 943107B0E7A30B914CCA5C8C /* libPods-iosTechRepostitory.a */; };
+		81A2EEF921787C1A00144CCE /* BIDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF521787C1A00144CCE /* BIDashBoard.m */; };
+		81A2EEFA21787C1A00144CCE /* BILineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF721787C1A00144CCE /* BILineChart.m */; };
+		81A2EEFB21787C1A00144CCE /* BITemperatureDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF821787C1A00144CCE /* BITemperatureDashBoard.m */; };
 		81BECB2220B4FF2400FEBCD2 /* TZBNetRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BECB2120B4FF2400FEBCD2 /* TZBNetRequestTests.m */; };
 		9267AC0D200DEFAA005F25A0 /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267AC0C200DEFAA005F25A0 /* SGQRCodeTool.m */; };
 		9267AC11200DF393005F25A0 /* ZJQRCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267AC0F200DF393005F25A0 /* ZJQRCodeScanner.m */; };
@@ -85,8 +85,6 @@
 		246DF24C207DBF130010545D /* TZBNetRequestCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZBNetRequestCallback.h; sourceTree = "<group>"; };
 		246DF24D207DDC280010545D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		246DF24E207DDC280010545D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		246DF252207DE5B70010545D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		246DF253207DE5B70010545D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		24900E80209B6065000D1394 /* YZFMDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZFMDB.m; sourceTree = "<group>"; };
 		24900E81209B6065000D1394 /* NSObject+YZDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YZDBModel.m"; sourceTree = "<group>"; };
 		24900E82209B6065000D1394 /* YZFMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZFMDB.h; sourceTree = "<group>"; };
@@ -122,6 +120,12 @@
 		3A54A16AF3A58E5050EEDE3B /* Pods-iosTechRepostitoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitoryUITests/Pods-iosTechRepostitoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4009D56C1C4A95E93B2A2263 /* Pods-iosTechRepostitoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitoryTests/Pods-iosTechRepostitoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61C281A8FD240A6A060767B5 /* libPods-iosTechRepostitoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosTechRepostitoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A2EEF321787C1A00144CCE /* BITemperatureDashBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITemperatureDashBoard.h; sourceTree = "<group>"; };
+		81A2EEF421787C1A00144CCE /* BIDashBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDashBoard.h; sourceTree = "<group>"; };
+		81A2EEF521787C1A00144CCE /* BIDashBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDashBoard.m; sourceTree = "<group>"; };
+		81A2EEF621787C1A00144CCE /* BILineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BILineChart.h; sourceTree = "<group>"; };
+		81A2EEF721787C1A00144CCE /* BILineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BILineChart.m; sourceTree = "<group>"; };
+		81A2EEF821787C1A00144CCE /* BITemperatureDashBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITemperatureDashBoard.m; sourceTree = "<group>"; };
 		81BECB2120B4FF2400FEBCD2 /* TZBNetRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZBNetRequestTests.m; sourceTree = "<group>"; };
 		89CB19B4283088A68E53E60B /* Pods-iosTechRepostitoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitoryTests/Pods-iosTechRepostitoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		9115FA34D57B003CB5D458E7 /* Pods-iosTechRepostitory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitory/Pods-iosTechRepostitory.debug.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 		24E42E36200B4E6200025EFA /* iosTechRepostitory */ = {
 			isa = PBXGroup;
 			children = (
+				81B93E56215DC6C900E9DA5E /* chart */,
 				9267AC08200DEF3E005F25A0 /* tool */,
 				24E42E37200B4E6200025EFA /* AppDelegate.h */,
 				24E42E38200B4E6200025EFA /* AppDelegate.m */,
@@ -292,8 +297,6 @@
 				24E42E42200B4E6200025EFA /* LaunchScreen.storyboard */,
 				24E42E45200B4E6200025EFA /* Info.plist */,
 				24E42E46200B4E6200025EFA /* main.m */,
-				246DF252207DE5B70010545D /* SecondViewController.h */,
-				246DF253207DE5B70010545D /* SecondViewController.m */,
 			);
 			path = iosTechRepostitory;
 			sourceTree = "<group>";
@@ -328,6 +331,19 @@
 				3A54A16AF3A58E5050EEDE3B /* Pods-iosTechRepostitoryUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		81B93E56215DC6C900E9DA5E /* chart */ = {
+			isa = PBXGroup;
+			children = (
+				81A2EEF421787C1A00144CCE /* BIDashBoard.h */,
+				81A2EEF521787C1A00144CCE /* BIDashBoard.m */,
+				81A2EEF621787C1A00144CCE /* BILineChart.h */,
+				81A2EEF721787C1A00144CCE /* BILineChart.m */,
+				81A2EEF321787C1A00144CCE /* BITemperatureDashBoard.h */,
+				81A2EEF821787C1A00144CCE /* BITemperatureDashBoard.m */,
+			);
+			path = chart;
 			sourceTree = "<group>";
 		};
 		9267AC08200DEF3E005F25A0 /* tool */ = {
@@ -667,9 +683,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24900E8F209B6066000D1394 /* User.m in Sources */,
-				246DF254207DE5B70010545D /* SecondViewController.m in Sources */,
 				24900E92209B6066000D1394 /* Student.m in Sources */,
 				24D51081207EFF29005F4970 /* KeyChainTool.m in Sources */,
+				81A2EEFA21787C1A00144CCE /* BILineChart.m in Sources */,
 				24E42E3C200B4E6200025EFA /* ViewController.m in Sources */,
 				24E42E47200B4E6200025EFA /* main.m in Sources */,
 				246DF24F207DDC280010545D /* Reachability.m in Sources */,
@@ -679,6 +695,8 @@
 				9267AC11200DF393005F25A0 /* ZJQRCodeScanner.m in Sources */,
 				24D5107A207EFA77005F4970 /* NSUserDefaultTool.m in Sources */,
 				24900E8C209B6066000D1394 /* NSObject+YZDBModel.m in Sources */,
+				81A2EEFB21787C1A00144CCE /* BITemperatureDashBoard.m in Sources */,
+				81A2EEF921787C1A00144CCE /* BIDashBoard.m in Sources */,
 				24D51086207F27D0005F4970 /* PassworkTool.m in Sources */,
 				24900E89209B6066000D1394 /* YZFMDB.m in Sources */,
 				246A46A5207C9DAD00E2035D /* TZBNetRequest.m in Sources */,
@@ -691,7 +709,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BECB2220B4FF2400FEBCD2 /* TZBNetRequestTests.m in Sources */,
-				246DF255207DE5B70010545D /* SecondViewController.m in Sources */,
 				24D51087207F27D0005F4970 /* PassworkTool.m in Sources */,
 				24900E93209B6066000D1394 /* Student.m in Sources */,
 				24D5108D207F2ADE005F4970 /* KeyArchiveTool.m in Sources */,
@@ -711,7 +728,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				246DF256207DE5B70010545D /* SecondViewController.m in Sources */,
 				24D51088207F27D0005F4970 /* PassworkTool.m in Sources */,
 				24900E94209B6066000D1394 /* Student.m in Sources */,
 				24D5108E207F2ADE005F4970 /* KeyArchiveTool.m in Sources */,

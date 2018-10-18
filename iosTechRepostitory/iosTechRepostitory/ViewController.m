@@ -8,8 +8,17 @@
 
 #import "ViewController.h"
 #import "TZBNetRequest.h"
+#import "BIDashBoard.h"
+#import "BITemperatureDashBoard.h"
+#import "BILineChart.h"
 
 @interface ViewController ()
+
+@property (nonatomic,strong) BIDashBoard *dashView;
+
+@property (nonatomic,strong) BITemperatureDashBoard *tempDashView;
+
+@property (nonatomic,strong) BILineChart *lineChart;
 
 @end
 
@@ -17,49 +26,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    BIDashBoard *dashView = [[BIDashBoard alloc] init];
+    dashView.backgroundColor = UIColor.whiteColor;
+    dashView.dashBgColor = UIColor.blueColor;
+    dashView.dashColor = UIColor.greenColor;
+    dashView.lineWidth = 5;
+    dashView.frame = CGRectMake(100, 20, 35*2, 35);
+    [self.view addSubview:dashView];
+    self.dashView = dashView;
+    
+    BITemperatureDashBoard *tempView = [BITemperatureDashBoard new];
+    tempView.backgroundColor = UIColor.lightGrayColor;
+    tempView.frame = CGRectMake(100, CGRectGetMaxY(dashView.frame) + 20, 100, 100);
+    [self.view addSubview:tempView];
+    self.tempDashView = tempView;
+    
+    NSArray *xData = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7"];
+    NSArray *yData = @[@"1",@"2",@"3",@"4",@"5",@"6",@"5.5"];
+    BILineChart *lineChart = [[BILineChart alloc] initWithFrame:CGRectMake(35, CGRectGetMaxY(tempView.frame) + 10, self.view.frame.size.width - 30 - 8, 200)];
+    lineChart.displayDataPoint = YES;
+    lineChart.bezierSmoothing = NO;
+    lineChart.maxValue = 10;
+    lineChart.xData = xData;
+    lineChart.unitX = @"天";
+    lineChart.unitY = @"斤";
+    lineChart.horizontalGridStep = (int)xData.count;
+    lineChart.verticalGridStep = 4;
+    lineChart.labelForIndex = ^NSString *(NSUInteger index) {
+        return [NSString stringWithFormat:@"%@%@",xData[index],lineChart.unitX];
+    };
+    lineChart.labelForValue = ^NSString *(NSUInteger index) {
+        return [NSString stringWithFormat:@"%.1f %@", (CGFloat)lineChart.maxValue / lineChart.verticalGridStep * (int)(index),lineChart.unitY];
+    };
+    [lineChart setChartData:yData];
+    [self.view addSubview:lineChart];
+    self.lineChart = lineChart;
    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    //[self request2];
-    //[self request];
-    [self downloadFile];
+    
+    CGFloat angle = arc4random() % 315 * 0.01;
+    self.dashView.angle = angle;
+    
+    [self.tempDashView setNeedsDisplay];
+
 }
-
-- (void)request{
-        NSURLSessionDataTask *task = [TZBNetTool getWithUrlString:@"https://api.douban.com/v2/movie/in_theaters" params:nil downloadProgress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSLog(@"%@",responseObject);
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"%@",error);
-        }];
-        if(task.state == NSURLSessionTaskStateRunning){
-            [task cancel];
-        }
-}
-
-- (void)downloadFile{
-    //http://dl154.80s.im:920/1711/[行尸走肉][第八季]第01集/[行尸走肉][第八季]第01集_hd.mp4
-    TZBNetRequest *request = [[TZBNetRequest alloc] initWithDownloadFileWithUrlString:@"http://m4.pc6.com/xuh3/revealapp.dmg" params:nil downloadProgressBlock:^(NSProgress *downloadProgress) {
-        NSLog(@"%f",1.0 *downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
-    } downloadDestinationBlock:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        NSString *fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:response.suggestedFilename];
-        NSLog(@"targetPath:%@",targetPath);
-        NSLog(@"fullPath:%@",fullPath);
-        return [NSURL fileURLWithPath:fullPath];
-    } downloadCompleteBlock:^(NSURLResponse *response, NSURL *filepath, NSError *error) {
-        NSLog(@"%@",filepath);
-
-    }];
-    [request startRequest];
-}
-
-
-
 
 @end
