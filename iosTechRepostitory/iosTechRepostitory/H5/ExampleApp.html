@@ -1,0 +1,45 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button id ='button' style="margin-left:50%;padding-left: -50;width: 100px;height: 100px;">getToken</button>
+        <script>
+            function setupWebViewJavascriptBridge(callback) {
+                if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+                if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+                window.WVJBCallbacks = [callback];
+                var WVJBIframe = document.createElement('iframe');
+                WVJBIframe.style.display = 'none';
+                WVJBIframe.src = 'https://__bridge_loaded__';
+                document.documentElement.appendChild(WVJBIframe);
+                setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+            }
+
+            setupWebViewJavascriptBridge(function(bridge) {
+                //oc调用js
+                bridge.registerHandler('registerAction', function(data, responseCallback) {
+                    //处理oc给的传参
+                    alert('oc request uid:' + data.uid + 'pwd:' + data.pwd)
+                    var responseData = { 'result':'tang handle success' }
+                    //处理完，回调传值给oc
+                    responseCallback(responseData)
+                })
+                                         
+                /* Initialize your app here */
+                var callbackButton = document.getElementById('button')//document.getElementById('buttons').appendChild(document.createElement('button'));
+                callbackButton.onclick = function(e){
+                    e.preventDefault()
+                    //js调用oc
+                    bridge.callHandler('getToken',{'userId':'zhangsan','name':'张三'},function(response){
+                        //处理oc过来的回调
+                        alert('oc response token:'+response.token)
+                    })
+                }
+                
+                
+            })
+        </script>
+    </body>
+   
+</html>

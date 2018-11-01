@@ -55,6 +55,8 @@
 		81A2EEFB21787C1A00144CCE /* BITemperatureDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF821787C1A00144CCE /* BITemperatureDashBoard.m */; };
 		81A2EF0121787CED00144CCE /* RectangleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEFF21787CED00144CCE /* RectangleIndicatorView.m */; };
 		81A2EF0221787CED00144CCE /* CircleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EF0021787CED00144CCE /* CircleIndicatorView.m */; };
+		81BB525B218AA07D00F43D9F /* YZH5BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BB5258218AA07D00F43D9F /* YZH5BaseViewController.m */; };
+		81BB525C218AA07D00F43D9F /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 81BB5259218AA07D00F43D9F /* ExampleApp.html */; };
 		81BECB2220B4FF2400FEBCD2 /* TZBNetRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BECB2120B4FF2400FEBCD2 /* TZBNetRequestTests.m */; };
 		9267AC0D200DEFAA005F25A0 /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267AC0C200DEFAA005F25A0 /* SGQRCodeTool.m */; };
 		9267AC11200DF393005F25A0 /* ZJQRCodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267AC0F200DF393005F25A0 /* ZJQRCodeScanner.m */; };
@@ -132,6 +134,9 @@
 		81A2EEFE21787CED00144CCE /* CircleIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleIndicatorView.h; sourceTree = "<group>"; };
 		81A2EEFF21787CED00144CCE /* RectangleIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectangleIndicatorView.m; sourceTree = "<group>"; };
 		81A2EF0021787CED00144CCE /* CircleIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleIndicatorView.m; sourceTree = "<group>"; };
+		81BB5258218AA07D00F43D9F /* YZH5BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZH5BaseViewController.m; sourceTree = "<group>"; };
+		81BB5259218AA07D00F43D9F /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
+		81BB525A218AA07D00F43D9F /* YZH5BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZH5BaseViewController.h; sourceTree = "<group>"; };
 		81BECB2120B4FF2400FEBCD2 /* TZBNetRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZBNetRequestTests.m; sourceTree = "<group>"; };
 		89CB19B4283088A68E53E60B /* Pods-iosTechRepostitoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitoryTests/Pods-iosTechRepostitoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		9115FA34D57B003CB5D458E7 /* Pods-iosTechRepostitory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTechRepostitory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosTechRepostitory/Pods-iosTechRepostitory.debug.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +297,7 @@
 		24E42E36200B4E6200025EFA /* iosTechRepostitory */ = {
 			isa = PBXGroup;
 			children = (
+				81BB5257218AA07D00F43D9F /* H5 */,
 				81B93E56215DC6C900E9DA5E /* chart */,
 				9267AC08200DEF3E005F25A0 /* tool */,
 				24E42E37200B4E6200025EFA /* AppDelegate.h */,
@@ -364,6 +370,16 @@
 			path = chart;
 			sourceTree = "<group>";
 		};
+		81BB5257218AA07D00F43D9F /* H5 */ = {
+			isa = PBXGroup;
+			children = (
+				81BB5258218AA07D00F43D9F /* YZH5BaseViewController.m */,
+				81BB5259218AA07D00F43D9F /* ExampleApp.html */,
+				81BB525A218AA07D00F43D9F /* YZH5BaseViewController.h */,
+			);
+			path = H5;
+			sourceTree = "<group>";
+		};
 		9267AC08200DEF3E005F25A0 /* tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,8 +438,6 @@
 				24E42E30200B4E6200025EFA /* Sources */,
 				24E42E31200B4E6200025EFA /* Frameworks */,
 				24E42E32200B4E6200025EFA /* Resources */,
-				DDE8668C4FCF7E76738FF29E /* [CP] Embed Pods Frameworks */,
-				0189646BFE98488823F083F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -442,8 +456,6 @@
 				24E42E48200B4E6200025EFA /* Sources */,
 				24E42E49200B4E6200025EFA /* Frameworks */,
 				24E42E4A200B4E6200025EFA /* Resources */,
-				21F98EB1288CC5346E607E0D /* [CP] Embed Pods Frameworks */,
-				D130882145853601ACFAA0E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -463,8 +475,6 @@
 				24E42E53200B4E6200025EFA /* Sources */,
 				24E42E54200B4E6200025EFA /* Frameworks */,
 				24E42E55200B4E6200025EFA /* Resources */,
-				2E451CAF72DB5508CB069C69 /* [CP] Embed Pods Frameworks */,
-				60CE8068D6141EA4A531F560 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -529,6 +539,7 @@
 				24E42E44200B4E6200025EFA /* LaunchScreen.storyboard in Resources */,
 				24E42E41200B4E6200025EFA /* Assets.xcassets in Resources */,
 				24E42E3F200B4E6200025EFA /* Main.storyboard in Resources */,
+				81BB525C218AA07D00F43D9F /* ExampleApp.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,51 +560,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0189646BFE98488823F083F9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTechRepostitory/Pods-iosTechRepostitory-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		21F98EB1288CC5346E607E0D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTechRepostitoryTests/Pods-iosTechRepostitoryTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2E451CAF72DB5508CB069C69 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTechRepostitoryUITests/Pods-iosTechRepostitoryUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3402D76ADE80480F3D615BFA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,21 +596,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60CE8068D6141EA4A531F560 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTechRepostitoryUITests/Pods-iosTechRepostitoryUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9466F7B633B1C80F3BE707A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -661,36 +612,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D130882145853601ACFAA0E2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTechRepostitoryTests/Pods-iosTechRepostitoryTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DDE8668C4FCF7E76738FF29E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTechRepostitory/Pods-iosTechRepostitory-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -721,6 +642,7 @@
 				24900E89209B6066000D1394 /* YZFMDB.m in Sources */,
 				246A46A5207C9DAD00E2035D /* TZBNetRequest.m in Sources */,
 				9267AC0D200DEFAA005F25A0 /* SGQRCodeTool.m in Sources */,
+				81BB525B218AA07D00F43D9F /* YZH5BaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
