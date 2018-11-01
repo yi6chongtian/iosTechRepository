@@ -37,6 +37,7 @@ xcuserdata/
 iosTechRepostitory/Pods/
 iosTechRepostitory/iosTechRepostitoryTests
 iosTechRepostitory/iosTechRepostitoryUITests
+iosTechRepostitory/*.swp
 
 
 # Carthage
