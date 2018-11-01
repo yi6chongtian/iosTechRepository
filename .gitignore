@@ -35,6 +35,9 @@ xcuserdata/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 iosTechRepostitory/Pods/
+iosTechRepostitory/iosTechRepostitoryTests
+iosTechRepostitory/iosTechRepostitoryUITests
+
 
 # Carthage
 #
