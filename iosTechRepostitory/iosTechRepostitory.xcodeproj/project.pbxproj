@@ -101,6 +101,12 @@
 		813893562237B5A200F5B925 /* SVLottieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893502237B5A200F5B925 /* SVLottieView.m */; };
 		813893572237B5A200F5B925 /* NSObject+YZHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893512237B5A200F5B925 /* NSObject+YZHUD.m */; };
 		813893582237B5A200F5B925 /* SVProgressHUD+YZExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893522237B5A200F5B925 /* SVProgressHUD+YZExtra.m */; };
+		813893602237B6BF00F5B925 /* UIScrollView+YZRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8138935D2237B6BF00F5B925 /* UIScrollView+YZRefresh.m */; };
+		813893612237B6BF00F5B925 /* MJRefreshLottieHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8138935E2237B6BF00F5B925 /* MJRefreshLottieHeader.m */; };
+		813893622237B6BF00F5B925 /* MJRefreshLottieFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8138935F2237B6BF00F5B925 /* MJRefreshLottieFooter.m */; };
+		8138936A2237B6E300F5B925 /* UIScrollView+YZRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893672237B6E300F5B925 /* UIScrollView+YZRefresh.m */; };
+		8138936B2237B6E300F5B925 /* MJRefreshLottieHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893682237B6E300F5B925 /* MJRefreshLottieHeader.m */; };
+		8138936C2237B6E300F5B925 /* MJRefreshLottieFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893692237B6E300F5B925 /* MJRefreshLottieFooter.m */; };
 		81A2EEF921787C1A00144CCE /* BIDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF521787C1A00144CCE /* BIDashBoard.m */; };
 		81A2EEFA21787C1A00144CCE /* BILineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF721787C1A00144CCE /* BILineChart.m */; };
 		81A2EEFB21787C1A00144CCE /* BITemperatureDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF821787C1A00144CCE /* BITemperatureDashBoard.m */; };
@@ -291,6 +297,18 @@
 		813893512237B5A200F5B925 /* NSObject+YZHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YZHUD.m"; sourceTree = "<group>"; };
 		813893522237B5A200F5B925 /* SVProgressHUD+YZExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+YZExtra.m"; sourceTree = "<group>"; };
 		813893532237B5A200F5B925 /* YZOverlayHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZOverlayHUD.h; sourceTree = "<group>"; };
+		8138935A2237B6BF00F5B925 /* UIScrollView+YZRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YZRefresh.h"; sourceTree = "<group>"; };
+		8138935B2237B6BF00F5B925 /* MJRefreshLottieFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshLottieFooter.h; sourceTree = "<group>"; };
+		8138935C2237B6BF00F5B925 /* MJRefreshLottieHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshLottieHeader.h; sourceTree = "<group>"; };
+		8138935D2237B6BF00F5B925 /* UIScrollView+YZRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YZRefresh.m"; sourceTree = "<group>"; };
+		8138935E2237B6BF00F5B925 /* MJRefreshLottieHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshLottieHeader.m; sourceTree = "<group>"; };
+		8138935F2237B6BF00F5B925 /* MJRefreshLottieFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshLottieFooter.m; sourceTree = "<group>"; };
+		813893642237B6E300F5B925 /* UIScrollView+YZRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YZRefresh.h"; sourceTree = "<group>"; };
+		813893652237B6E300F5B925 /* MJRefreshLottieFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshLottieFooter.h; sourceTree = "<group>"; };
+		813893662237B6E300F5B925 /* MJRefreshLottieHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshLottieHeader.h; sourceTree = "<group>"; };
+		813893672237B6E300F5B925 /* UIScrollView+YZRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YZRefresh.m"; sourceTree = "<group>"; };
+		813893682237B6E300F5B925 /* MJRefreshLottieHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshLottieHeader.m; sourceTree = "<group>"; };
+		813893692237B6E300F5B925 /* MJRefreshLottieFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshLottieFooter.m; sourceTree = "<group>"; };
 		81A2EEF321787C1A00144CCE /* BITemperatureDashBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITemperatureDashBoard.h; sourceTree = "<group>"; };
 		81A2EEF421787C1A00144CCE /* BIDashBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDashBoard.h; sourceTree = "<group>"; };
 		81A2EEF521787C1A00144CCE /* BIDashBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDashBoard.m; sourceTree = "<group>"; };
@@ -769,6 +787,33 @@
 			path = HUD;
 			sourceTree = "<group>";
 		};
+		813893592237B6BF00F5B925 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				8138935A2237B6BF00F5B925 /* UIScrollView+YZRefresh.h */,
+				8138935B2237B6BF00F5B925 /* MJRefreshLottieFooter.h */,
+				8138935C2237B6BF00F5B925 /* MJRefreshLottieHeader.h */,
+				8138935D2237B6BF00F5B925 /* UIScrollView+YZRefresh.m */,
+				8138935E2237B6BF00F5B925 /* MJRefreshLottieHeader.m */,
+				8138935F2237B6BF00F5B925 /* MJRefreshLottieFooter.m */,
+			);
+			name = Refresh;
+			path = iosTechRepostitory/tool/Refresh;
+			sourceTree = SOURCE_ROOT;
+		};
+		813893632237B6E300F5B925 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				813893642237B6E300F5B925 /* UIScrollView+YZRefresh.h */,
+				813893652237B6E300F5B925 /* MJRefreshLottieFooter.h */,
+				813893662237B6E300F5B925 /* MJRefreshLottieHeader.h */,
+				813893672237B6E300F5B925 /* UIScrollView+YZRefresh.m */,
+				813893682237B6E300F5B925 /* MJRefreshLottieHeader.m */,
+				813893692237B6E300F5B925 /* MJRefreshLottieFooter.m */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
 		81A2EEFC21787CED00144CCE /* IndicatorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +828,7 @@
 		81B93E56215DC6C900E9DA5E /* chart */ = {
 			isa = PBXGroup;
 			children = (
+				813893592237B6BF00F5B925 /* Refresh */,
 				81A2EEFC21787CED00144CCE /* IndicatorView */,
 				81A2EEF421787C1A00144CCE /* BIDashBoard.h */,
 				81A2EEF521787C1A00144CCE /* BIDashBoard.m */,
@@ -807,6 +853,7 @@
 		9267AC08200DEF3E005F25A0 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				813893632237B6E300F5B925 /* Refresh */,
 				813893492237B5A200F5B925 /* HUD */,
 				8138933E2237AB9100F5B925 /* Log */,
 				813892A02237A1AC00F5B925 /* BAKit */,
@@ -1048,6 +1095,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8138936C2237B6E300F5B925 /* MJRefreshLottieFooter.m in Sources */,
+				8138936A2237B6E300F5B925 /* UIScrollView+YZRefresh.m in Sources */,
 				813893142237A1AD00F5B925 /* BAKit_LocationManager.m in Sources */,
 				24900E8F209B6066000D1394 /* User.m in Sources */,
 				8138931C2237A1AD00F5B925 /* UIView+BATransition.m in Sources */,
@@ -1056,6 +1105,7 @@
 				813893162237A1AD00F5B925 /* BAKit_FPSLabel.m in Sources */,
 				24900E92209B6066000D1394 /* Student.m in Sources */,
 				813893542237B5A200F5B925 /* YZOverlayHUD.m in Sources */,
+				813893602237B6BF00F5B925 /* UIScrollView+YZRefresh.m in Sources */,
 				8138933A2237A1AD00F5B925 /* NSString+BASize.m in Sources */,
 				24D51081207EFF29005F4970 /* KeyChainTool.m in Sources */,
 				8138931D2237A1AD00F5B925 /* UIView+BAFind.m in Sources */,
@@ -1095,6 +1145,7 @@
 				813893262237A1AD00F5B925 /* UIBarButtonItem+BAKit.m in Sources */,
 				8138933C2237A1AD00F5B925 /* NSObject+BAMJParse.m in Sources */,
 				8138933D2237A1AD00F5B925 /* NSDateFormatter+BAKit.m in Sources */,
+				813893622237B6BF00F5B925 /* MJRefreshLottieFooter.m in Sources */,
 				8138932D2237A1AD00F5B925 /* CALayer+BAAnimation.m in Sources */,
 				81A2EEFB21787C1A00144CCE /* BITemperatureDashBoard.m in Sources */,
 				813893322237A1AD00F5B925 /* NSString+BAEncrypt.m in Sources */,
@@ -1102,6 +1153,7 @@
 				81A2EEF921787C1A00144CCE /* BIDashBoard.m in Sources */,
 				24D51086207F27D0005F4970 /* PassworkTool.m in Sources */,
 				813893382237A1AD00F5B925 /* NSString+BARegular.m in Sources */,
+				813893612237B6BF00F5B925 /* MJRefreshLottieHeader.m in Sources */,
 				813893552237B5A200F5B925 /* YZCircleIndicatorView.m in Sources */,
 				8138933B2237A1AD00F5B925 /* NSString+BAColor.m in Sources */,
 				81A2EF0221787CED00144CCE /* CircleIndicatorView.m in Sources */,
@@ -1120,6 +1172,7 @@
 				8138932F2237A1AD00F5B925 /* NSString+BATransform.m in Sources */,
 				8138931E2237A1AD00F5B925 /* UIView+BAScreenshot.m in Sources */,
 				81BB525B218AA07D00F43D9F /* YZH5BaseViewController.m in Sources */,
+				8138936B2237B6E300F5B925 /* MJRefreshLottieHeader.m in Sources */,
 				813893172237A1AD00F5B925 /* BAKit_ScaleLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
