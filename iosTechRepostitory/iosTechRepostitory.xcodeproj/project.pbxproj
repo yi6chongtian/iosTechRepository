@@ -93,6 +93,9 @@
 		8138933B2237A1AD00F5B925 /* NSString+BAColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8138930B2237A1AD00F5B925 /* NSString+BAColor.m */; };
 		8138933C2237A1AD00F5B925 /* NSObject+BAMJParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8138930F2237A1AD00F5B925 /* NSObject+BAMJParse.m */; };
 		8138933D2237A1AD00F5B925 /* NSDateFormatter+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893112237A1AD00F5B925 /* NSDateFormatter+BAKit.m */; };
+		813893462237AB9100F5B925 /* YZLoggerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893432237AB9100F5B925 /* YZLoggerFormatter.m */; };
+		813893472237AB9100F5B925 /* YZLoggerFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893442237AB9100F5B925 /* YZLoggerFileManager.m */; };
+		813893482237AB9100F5B925 /* YZLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 813893452237AB9100F5B925 /* YZLogger.m */; };
 		81A2EEF921787C1A00144CCE /* BIDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF521787C1A00144CCE /* BIDashBoard.m */; };
 		81A2EEFA21787C1A00144CCE /* BILineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF721787C1A00144CCE /* BILineChart.m */; };
 		81A2EEFB21787C1A00144CCE /* BITemperatureDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A2EEF821787C1A00144CCE /* BITemperatureDashBoard.m */; };
@@ -266,6 +269,13 @@
 		8138930F2237A1AD00F5B925 /* NSObject+BAMJParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BAMJParse.m"; sourceTree = "<group>"; };
 		813893112237A1AD00F5B925 /* NSDateFormatter+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+BAKit.m"; sourceTree = "<group>"; };
 		813893122237A1AD00F5B925 /* NSDateFormatter+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+BAKit.h"; sourceTree = "<group>"; };
+		8138933F2237AB9100F5B925 /* YZLoggerFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLoggerFormatter.h; sourceTree = "<group>"; };
+		813893402237AB9100F5B925 /* YZLoggerFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLoggerFileManager.h; sourceTree = "<group>"; };
+		813893412237AB9100F5B925 /* YZLoggerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLoggerModule.h; sourceTree = "<group>"; };
+		813893422237AB9100F5B925 /* YZLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLogger.h; sourceTree = "<group>"; };
+		813893432237AB9100F5B925 /* YZLoggerFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLoggerFormatter.m; sourceTree = "<group>"; };
+		813893442237AB9100F5B925 /* YZLoggerFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLoggerFileManager.m; sourceTree = "<group>"; };
+		813893452237AB9100F5B925 /* YZLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLogger.m; sourceTree = "<group>"; };
 		81A2EEF321787C1A00144CCE /* BITemperatureDashBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITemperatureDashBoard.h; sourceTree = "<group>"; };
 		81A2EEF421787C1A00144CCE /* BIDashBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDashBoard.h; sourceTree = "<group>"; };
 		81A2EEF521787C1A00144CCE /* BIDashBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDashBoard.m; sourceTree = "<group>"; };
@@ -713,6 +723,20 @@
 			path = NSDate;
 			sourceTree = "<group>";
 		};
+		8138933E2237AB9100F5B925 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				8138933F2237AB9100F5B925 /* YZLoggerFormatter.h */,
+				813893402237AB9100F5B925 /* YZLoggerFileManager.h */,
+				813893412237AB9100F5B925 /* YZLoggerModule.h */,
+				813893422237AB9100F5B925 /* YZLogger.h */,
+				813893432237AB9100F5B925 /* YZLoggerFormatter.m */,
+				813893442237AB9100F5B925 /* YZLoggerFileManager.m */,
+				813893452237AB9100F5B925 /* YZLogger.m */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 		81A2EEFC21787CED00144CCE /* IndicatorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,6 +775,7 @@
 		9267AC08200DEF3E005F25A0 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				8138933E2237AB9100F5B925 /* Log */,
 				813892A02237A1AC00F5B925 /* BAKit */,
 				24D51077207EFA06005F4970 /* DataStore */,
 				246A46A1207C9C7100E2035D /* NetRequest(网络请求) */,
@@ -1020,6 +1045,7 @@
 				813893282237A1AD00F5B925 /* UITableViewCell+BAKit.m in Sources */,
 				24900E8C209B6066000D1394 /* NSObject+YZDBModel.m in Sources */,
 				8138932A2237A1AD00F5B925 /* UITableView+BAKit.m in Sources */,
+				813893472237AB9100F5B925 /* YZLoggerFileManager.m in Sources */,
 				813893292237A1AD00F5B925 /* UITableViewCell+BAReuse.m in Sources */,
 				813893272237A1AD00F5B925 /* UIBarButtonItem+BABadge.m in Sources */,
 				813893242237A1AD00F5B925 /* UIView+BAAnimation.m in Sources */,
@@ -1027,6 +1053,7 @@
 				813893252237A1AD00F5B925 /* UIView+BAGlowView.m in Sources */,
 				813893132237A1AD00F5B925 /* BAKit_Const_Color.m in Sources */,
 				8138931B2237A1AD00F5B925 /* UIView+BAFrame.m in Sources */,
+				813893462237AB9100F5B925 /* YZLoggerFormatter.m in Sources */,
 				8138932C2237A1AD00F5B925 /* CABasicAnimation+BAKit.m in Sources */,
 				813893262237A1AD00F5B925 /* UIBarButtonItem+BAKit.m in Sources */,
 				8138933C2237A1AD00F5B925 /* NSObject+BAMJParse.m in Sources */,
@@ -1040,6 +1067,7 @@
 				813893382237A1AD00F5B925 /* NSString+BARegular.m in Sources */,
 				8138933B2237A1AD00F5B925 /* NSString+BAColor.m in Sources */,
 				81A2EF0221787CED00144CCE /* CircleIndicatorView.m in Sources */,
+				813893482237AB9100F5B925 /* YZLogger.m in Sources */,
 				8138931A2237A1AD00F5B925 /* UIColor+BAKit.m in Sources */,
 				813893352237A1AD00F5B925 /* NSAttributedString+BASize.m in Sources */,
 				813893302237A1AD00F5B925 /* NSString+BAKit.m in Sources */,
